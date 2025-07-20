@@ -1,0 +1,89 @@
+
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>
+
+     Guess The number 
+
+</h1>
+
+<br>
+
+
+<input id="guessnumber">
+
+</input>
+
+<button onclick="check()"> 
+
+     Check 
+
+</button>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<p id="result">
+
+     You are Right/Wrong
+
+</p>
+
+
+
+<p id="score">
+
+     Score:10 
+
+</p>
+
+<script>
+       
+     var tscore=10
+     var guessNumber=document.getElementById("guessnumber")
+     var result=document.getElementById("result")
+     var score=document.getElementById("score")
+     var randomNumber=Math.floor(Math.random()*10)+1
+
+     function check()
+     {
+          var enteredNumber= guessnumber.value
+          
+          if (randomNumber==enteredNumber)
+
+          {
+               console.log("Right")
+               result.textContent="Right"
+               alert ("YOU WON")
+               tscore=tscore+100
+
+
+          }
+
+          else
+
+          {
+
+              result.textContent="Wrong"
+              tscore=tscore-1
+              score.textContent="score:"+tscore
+
+
+
+
+          }
+
+     }
+
+</script>
+
+</center>
